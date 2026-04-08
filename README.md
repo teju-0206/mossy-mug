@@ -60,16 +60,6 @@ mossy-mug/
 
 ---
 
-## 📸 Design Preview
-
-### Hi-fi Desktop
-![Desktop Hi-fi](design/phase-3-hifi-design-complete.png)
-
-### Hi-fi Mobile
-![Mobile Hi-fi](design/phase3-mobile-section1.png)
-
----
-
 ## 🙋‍♀️ Author
 
 **Tejeswini B** — 2nd year CSE Student, learning UI/UX and frontend development through hands-on capstone projects.
