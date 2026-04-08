@@ -1,0 +1,630 @@
+/* =============================================
+   MOSSY MUG — style.css
+   Phase 4 (Structure) + Phase 5 (Responsive)
+   Matches hi-fi Figma design exactly.
+   ============================================= */
+
+/* =====================
+   CSS VARIABLES
+   ===================== */
+:root {
+  --moss-green: #4a7c59;
+  --sage: #7aae8a;
+  --warm-beige: #f5ecd7;
+  --off-white: #faf7f2;
+  --rust-brown: #a0522d;
+  --deep-charcoal: #2c2c2a;
+
+  --font-display: "Playfair Display", serif;
+  --font-heading: "Lora", serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+/* =====================
+   RESET + BASE
+   ===================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--off-white);
+  color: var(--deep-charcoal);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =====================
+   PLACEHOLDER (remove when images are added)
+   ===================== */
+.img-placeholder {
+  background-color: var(--sage);
+  opacity: 0.45;
+}
+
+/* =====================
+   BUTTONS
+   ===================== */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--rust-brown);
+  color: var(--off-white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #8a4424;
+}
+
+.btn-order-small {
+  display: inline-block;
+  background-color: var(--rust-brown);
+  color: var(--off-white);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.4rem 1.2rem;
+  border-radius: 5px;
+  margin-top: 0.75rem;
+  transition: background-color 0.2s;
+}
+.btn-order-small:hover {
+  background-color: #8a4424;
+}
+
+/* =====================
+   NAVBAR
+   ===================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  background-color: var(--off-white);
+  border-bottom: 1px solid rgba(74, 124, 89, 0.12);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--moss-green);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--deep-charcoal);
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--moss-green);
+}
+
+/* "Order Now" button in nav */
+.nav-links .btn-order {
+  background-color: var(--rust-brown);
+  color: var(--off-white) !important;
+  padding: 0.45rem 1.1rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+}
+.nav-links .btn-order:hover {
+  background-color: #8a4424;
+  color: var(--off-white) !important;
+}
+
+/* Hamburger — hidden on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--deep-charcoal);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+/* Animate hamburger → X */
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =====================
+   HERO
+   ===================== */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: flex-end; /* text sits near bottom-left like your Figma */
+  padding: 4rem 6%;
+  background-image: url("images/hero-bg.jpg");
+  background-color: #3a3a38; /* fallback until image is added */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(30, 28, 26, 0.72) 0%,
+    rgba(30, 28, 26, 0.2) 60%,
+    transparent 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+
+.hero-tagline {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.8rem;
+}
+
+/* =====================
+   OUR MENU (Categories)
+   ===================== */
+.menu-section {
+  padding: 4rem 5%;
+  background-color: var(--off-white);
+}
+
+.menu-header {
+  margin-bottom: 2rem;
+}
+
+.menu-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--deep-charcoal);
+  margin-bottom: 0.2rem;
+}
+
+.menu-sub {
+  font-size: 0.9rem;
+  color: var(--deep-charcoal);
+  opacity: 0.6;
+}
+
+.category-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: var(--warm-beige);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(44, 44, 42, 0.1);
+}
+
+.category-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--moss-green);
+  flex-shrink: 0;
+
+  /* ─── ADD YOUR ICON IMAGE HERE ──────────────
+     background-image: url('images/hot-drinks-icon.png');
+     background-size: cover;
+     ─────────────────────────────────────────── */
+}
+
+/* If you use <img> instead of div, use this class: */
+.category-circle-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.category-text h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--deep-charcoal);
+  margin-bottom: 0.15rem;
+}
+
+.category-text p {
+  font-size: 0.8rem;
+  color: var(--deep-charcoal);
+  opacity: 0.65;
+}
+
+/* =====================
+   WHAT'S BREWING (Item Cards)
+   ===================== */
+.brewing-section {
+  padding: 4rem 5%;
+  background-color: var(--warm-beige);
+}
+
+.brewing-section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--deep-charcoal);
+  margin-bottom: 2rem;
+}
+
+.items-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.item-card {
+  flex: 1;
+  min-width: 220px;
+  background-color: var(--off-white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(44, 44, 42, 0.07);
+  transition: box-shadow 0.2s ease;
+}
+.item-card:hover {
+  box-shadow: 0 6px 24px rgba(44, 44, 42, 0.13);
+}
+
+.item-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.item-info {
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.item-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--deep-charcoal);
+  margin-bottom: 0.2rem;
+}
+
+.item-info p {
+  font-size: 0.82rem;
+  color: var(--deep-charcoal);
+  opacity: 0.65;
+  margin-bottom: 0.4rem;
+}
+
+.price {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: var(--rust-brown);
+}
+
+/* =====================
+   ABOUT
+   ===================== */
+.about-section {
+  padding: 4rem 5%;
+  background-color: var(--warm-beige);
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--deep-charcoal);
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  color: var(--deep-charcoal);
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.about-tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--moss-green) !important;
+  opacity: 1 !important;
+  font-size: 0.9rem !important;
+}
+
+.about-img {
+  width: 380px;
+  height: 280px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  object-fit: cover;
+  display: block;
+}
+
+/* =====================
+   FIND US
+   ===================== */
+.find-us-section {
+  padding: 4rem 5%;
+  background-color: var(--off-white);
+}
+
+.find-us-section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--deep-charcoal);
+  margin-bottom: 2rem;
+}
+
+.find-us-grid {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.map-img {
+  width: 420px;
+  height: 260px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+.find-us-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.find-us-info p {
+  font-size: 0.9rem;
+  color: var(--deep-charcoal);
+  opacity: 0.8;
+}
+
+.address {
+  font-family: var(--font-heading);
+  font-size: 1rem !important;
+  opacity: 1 !important;
+  margin-bottom: 0.4rem;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+.footer {
+  background-color: var(--deep-charcoal);
+  color: var(--off-white);
+  padding: 2.5rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--sage);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--sage);
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  opacity: 0.45;
+}
+
+/* =====================================================================
+   RESPONSIVE — PHASE 5
+   Mobile-first breakpoints to match your mobile Figma frames exactly.
+   ===================================================================== */
+
+/* ── Tablet + small desktop ── */
+@media (max-width: 900px) {
+  .about-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .about-img {
+    width: 100%;
+    height: 260px;
+  }
+}
+
+/* ── Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    right: 0;
+    background-color: var(--off-white);
+    padding: 1.2rem 5%;
+    border-bottom: 1px solid rgba(74, 124, 89, 0.12);
+    gap: 1.1rem;
+    z-index: 99;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Hero — text centered, image fills frame */
+  .hero {
+    min-height: 72vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 6%;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+
+  /* Menu categories — stack vertically */
+  .category-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .category-card {
+    min-width: unset;
+  }
+
+  /* What's Brewing — stack vertically, full width */
+  .items-row {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .item-card {
+    min-width: unset;
+    width: 100%;
+  }
+
+  /* About — image on top, text below */
+  .about-section {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem 6%;
+  }
+  .about-img {
+    width: 100%;
+    height: 240px;
+    order: -1; /* image goes above text */
+  }
+  .about-text h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  /* Find Us — map on top, info below */
+  .find-us-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .map-img {
+    width: 100%;
+    height: 220px;
+  }
+
+  /* Footer — stack center */
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+/* ── Small phones (≤ 480px) ── */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+  .menu-header h2,
+  .brewing-section h2,
+  .about-text h2,
+  .find-us-section h2 {
+    font-size: 1.5rem;
+  }
+}

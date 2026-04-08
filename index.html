@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mossy Mug — Pull up a chair. Stay a while.</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ======== NAVBAR ======== -->
+    <nav class="navbar">
+      <div class="nav-logo">Mossy Mug</div>
+      <ul class="nav-links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#find-us">Find Us</a></li>
+        <li><a href="#menu" class="btn-order">Order Now</a></li>
+      </ul>
+      <!-- Hamburger for mobile -->
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- ======== HERO ======== -->
+    <section class="hero" id="home">
+      <!--
+      REPLACE background-image in CSS (.hero) with your exported hero image.
+      e.g. background-image: url('images/hero-bg.jpg');
+    -->
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Mossy Mug</h1>
+        <p class="hero-tagline">Pull up a chair. Stay a while.</p>
+        <a href="#menu" class="btn-primary">Order Now</a>
+      </div>
+    </section>
+
+    <!-- ======== OUR MENU (Categories) ======== -->
+    <section class="menu-section" id="menu">
+      <div class="menu-header">
+        <h2>Our Menu</h2>
+        <p class="menu-sub">What are you in the mood for?</p>
+      </div>
+      <div class="category-row">
+        <div class="category-card">
+          <!--
+          Replace the circle div with your exported icon/image:
+          <img src="images/hot-drinks-icon.png" alt="Hot Drinks" class="category-circle-img" />
+          OR keep the circle as a color placeholder until you have images.
+        -->
+          <div class="category-circle"></div>
+          <div class="category-text">
+            <h3>Hot Drinks</h3>
+            <p>Lattes, cappuccinos &amp; more</p>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <div class="category-circle"></div>
+          <div class="category-text">
+            <h3>Cold Drinks</h3>
+            <p>Iced brews, smoothies &amp; more</p>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <div class="category-circle"></div>
+          <div class="category-text">
+            <h3>Bites</h3>
+            <p>Snacks, sandwiches &amp; more</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== WHAT'S BREWING (Item Cards) ======== -->
+    <section class="brewing-section" id="items">
+      <h2>What's Brewing</h2>
+
+      <div class="items-row">
+        <!-- Card 1 -->
+        <div class="item-card">
+          <img
+            src="images/mossy-latte.jpg"
+            alt="Mossy Latte"
+            class="item-img"
+          />
+          <div class="item-info">
+            <h3>Mossy Latte</h3>
+            <p>Creamy, earthy, warming</p>
+            <span class="price">Rs. 120</span>
+            <a href="#" class="btn-order-small">Order</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="item-card">
+          <img src="images/cold-brew.jpg" alt="Cold Brew" class="item-img" />
+          <div class="item-info">
+            <h3>Cold Brew</h3>
+            <p>Smooth, bold, refreshing</p>
+            <span class="price">Rs. 100</span>
+            <a href="#" class="btn-order-small">Order</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="item-card">
+          <img
+            src="images/avacado-toast.jpg"
+            alt="Avocado Toast"
+            class="item-img"
+          />
+          <div class="item-info">
+            <h3>Avocado Toast</h3>
+            <p>Fresh, simple, satisfying</p>
+            <span class="price">Rs. 80</span>
+            <a href="#" class="btn-order-small">Order</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== ABOUT ======== -->
+    <section class="about-section" id="about">
+      <div class="about-text">
+        <h2>About Mossy Mug</h2>
+        <p>A cozy corner for the college crowd.</p>
+        <p class="about-tagline">Pull up a chair and stay a while.</p>
+      </div>
+
+      <img
+        src="images/about-cafe.jpg"
+        alt="Inside Mossy Mug"
+        class="about-img"
+      />
+    </section>
+
+    <!-- ======== FIND US ======== -->
+    <section class="find-us-section" id="find-us">
+      <h2>Find Us</h2>
+
+      <div class="find-us-grid">
+        <img
+          src="images/map.jpg"
+          alt="Map showing Mossy Mug location"
+          class="map-img"
+        />
+
+        <div class="find-us-info">
+          <p class="address">123 College Road</p>
+          <p>Mon–Fri: 8am – 10pm</p>
+          <p>Sat–Sun: 9am – 11pm</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="footer">
+      <p class="footer-logo">Mossy Mug</p>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+      </div>
+      <p class="footer-copy">@2026 Mossy Mug</p>
+    </footer>
+
+    <!-- Mobile nav toggle script -->
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        toggle.classList.toggle("active");
+      });
+      // Close menu when a link is clicked
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          toggle.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
