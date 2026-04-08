@@ -1,60 +1,77 @@
-Mossy Mug ☕
+# 🌿 Mossy Mug
 
-Coffee shop UI — designed in Figma, built with HTML & CSS
-Personal portfolio project focused on clean UI/UX and responsive design.
+> *Pull up a chair. Stay a while.*
 
-⸻
+A responsive single-page coffee shop website — designed in Figma and built with HTML5 + CSS3. This is my first UI/UX capstone project, part of my personal portfolio development as a 2nd year CSE Student.
 
-Project Overview
+---
 
-Mossy Mug is a nature-inspired coffee shop interface built to explore the full UI/UX workflow — from research and wireframing to high-fidelity design and frontend implementation.
+## 📌 About the Project
 
-⸻
+Mossy Mug is a fictional coffee shop designed for college students who need an affordable, relaxed hangout. The project follows a structured 6-phase roadmap — from UX research and wireframing all the way to a polished, responsive website.
 
-Phases
+**🌐 Live site: https://teju-0206.github.io/mossy-mug
+**Figma design:** [View hi-fi design]
+https://www.figma.com/design/CMYe2q64i32mwu1MVI9z8S/mossy-mug?node-id=18-2&t=26iO3dmfUPtTN27E-1.
 
-Phase 1 — UX Research & Planning
-	•	Defined target users and their needs
-	•	Established brand identity (colors, typography, tone)
-	•	Mapped layout structure and content hierarchy
+---
 
-Phase 2 — Wireframing (Lo-fi)
-	•	Created low-fidelity layouts in Figma
-	•	Focused on structure, spacing, and section flow
+## 🎨 Brand Identity
 
-📁  design/phase-2/
+| **Name** | Mossy Mug |
+| **Tagline** | Pull up a chair. Stay a while. |
+| **Audience** | College students — studiers, crews, first-timers, regulars |
+| **Tone** | Unhurried, welcoming, unpretentious, quietly aesthetic |
 
-⸻
 
-Phase 3 — Hi-fi Design
+## 🗂 Folder Structure
 
-Desktop
-	•	Applied full brand system (colors, typography, imagery)
-	•	Built reusable components and layouts
+```
+mossy-mug/
+├── index.html        # Main site
+├── style.css         # All styles (desktop + responsive)
+├── images/           # Exported images from Figma
+├── design/           # Figma screenshots (lo-fi + hi-fi)
+├── .gitignore
+└── README.md
+```
 
-📁  design/phase3-desktop/
+---
 
-Mobile
-	•	Designed responsive layouts for smaller screens
-	•	Adapted components using vertical stacking and spacing
+## 🗺 Roadmap
 
-📁 design/phase3-mobile/
+| Phase | What | Status |
+|---|---|---|
+| 1 | UX Research & Planning — personas, brand identity, color, typography | ✅ Done |
+| 2 | Figma Lo-fi Wireframe — all sections, layout flow | ✅ Done |
+| 3 | Figma Hi-fi Design — desktop + mobile, Auto Layout, real images | ✅ Done |
+| 4 | HTML + CSS Structure — translating Figma to code | ✅ Done |
+| 5 | Responsive CSS — Flexbox + media queries, mobile layout | ✅ Done |
+| 6 | Polish + Test — cross-device, accessibility, final review | 🔜 Next |
 
-⸻
+---
 
-Tech Stack
-	•	Figma (UI/UX Design)
-	•	HTML5
-	•	CSS3 (Flexbox + Media Queries)
+## 🛠 Tech Stack
 
-⸻
+- **Design:** Figma (lo-fi wireframes, hi-fi desktop + mobile)
+- **Frontend:** HTML5, CSS3 (Flexbox, Media Queries)
+- **Fonts:** Google Fonts — Playfair Display, Lora, DM Sans
+- **Version control:** Git + GitHub (SSH)
 
-Status
-	•	Hi-fi design (Desktop + Mobile) complete
-	•	Frontend development — next phase
+---
 
-⸻
+## 📸 Design Preview
 
-Author
+### Hi-fi Desktop
+![Desktop Hi-fi](design/phase-3-hifi-design-complete.png)
 
-Tejeswini
+### Hi-fi Mobile
+![Mobile Hi-fi](design/phase3-mobile-section1.png)
+
+---
+
+## 🙋‍♀️ Author
+
+**Tejeswini B** — 2nd year CSE Student, learning UI/UX and frontend development through hands-on capstone projects.
+
+[LinkedIn](www.linkedin.com/in/tejeswini-balachander) · [GitHub](https://github.com/teju-0206)
