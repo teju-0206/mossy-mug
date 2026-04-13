@@ -47,7 +47,7 @@ mossy-mug/
 | 3 | Figma Hi-fi Design — desktop + mobile, Auto Layout, real images | ✅ Done |
 | 4 | HTML + CSS Structure — translating Figma to code | ✅ Done |
 | 5 | Responsive CSS — Flexbox + media queries, mobile layout | ✅ Done |
-| 6 | Polish + Test — cross-device, accessibility, final review | 🔜 Next |
+| 6 | Polish + Test — cross-device, accessibility, final review | ✅ Done  |
 
 ---
 
@@ -64,4 +64,5 @@ mossy-mug/
 
 **Tejeswini B** — 2nd year CSE Student, learning UI/UX and frontend development through hands-on capstone projects.
 
-[LinkedIn](www.linkedin.com/in/tejeswini-balachander) · [GitHub](https://github.com/teju-0206)
+[LinkedIn](www.linkedin.com/in/tejeswini-balachander)
+[GitHub](https://github.com/teju-0206)
